@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="pref_authority_only"
+        android:title="Show Authority Only"
+        android:defaultValue="false" />
+    <CheckBoxPreference
+        android:key="pref_keep_screen_on"
+        android:title="Keep Screen On"
+        android:defaultValue="false" />
+</PreferenceScreen>

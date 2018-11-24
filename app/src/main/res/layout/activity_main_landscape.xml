@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.33">
+
+        <Button
+            android:id="@+id/btn_authority_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:minWidth="56dp"
+            android:text="-"
+            android:onClick="btnPress"/>
+
+        <ImageView
+            android:id="@+id/image_authority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_authority_up"
+            android:layout_above="@+id/btn_authority_down"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/authority"
+            android:clickable="true"
+            android:onClick="btnPress"/>
+
+        <Button
+            android:id="@+id/btn_authority_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:minWidth="56dp"
+            android:text="+"
+            android:onClick="btnPress"/>
+
+        <TextView
+            android:id="@+id/text_authority"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignTop="@+id/image_authority"
+            android:layout_alignBottom="@+id/image_authority"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:text="50"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.66">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/btn_reset"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_trade_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:minWidth="56dp"
+                    android:text="+"
+                    android:onClick="btnPress"/>
+
+                <ImageView
+                    android:id="@+id/image_trade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_trade_up"
+                    android:layout_above="@+id/btn_trade_down"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/trade"
+                    android:clickable="true"
+                    android:onClick="btnPress"/>
+
+                <Button
+                    android:id="@+id/btn_trade_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:minWidth="56dp"
+                    android:text="-"
+                    android:onClick="btnPress"/>
+
+                <TextView
+                    android:id="@+id/text_trade"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@+id/image_trade"
+                    android:layout_alignBottom="@+id/image_trade"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:includeFontPadding="false"
+                    android:text="0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_combat_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:minWidth="56dp"
+                    android:text="+"
+                    android:onClick="btnPress"/>
+
+                <ImageView
+                    android:id="@+id/image_combat"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/btn_combat_up"
+                    android:layout_above="@+id/btn_combat_down"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/combat"
+                    android:clickable="true"
+                    android:onClick="btnPress"/>
+
+                <Button
+                    android:id="@+id/btn_combat_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:minWidth="56dp"
+                    android:text="-"
+                    android:onClick="btnPress"/>
+
+                <TextView
+                    android:id="@+id/text_combat"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@id/image_combat"
+                    android:layout_alignBottom="@id/image_combat"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:includeFontPadding="false"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Reset"
+            android:onClick="btnPress"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
